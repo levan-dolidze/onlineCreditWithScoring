@@ -17,8 +17,8 @@
         <h1><img src="libertyLogo.png" alt=""></h1>
     </header>
 
-    <h6 class="title">business information</h6>
-    <form action="Third.html" enctype="multipart/form-data" id="signup">
+    <h5 class="basicsTitle">business information</h5>
+    <form  id="signup">
 
         <div class="formgroup">
             <label for="nameid">business name </label>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="formgroup">
-            <label for="selectid">legan entity type</label>
+            <label for="selectid">legal entity type</label>
             <select name="select" id="selectid">
                 <option value="24hour">LLC (Limited Liability Company)</option>
                 <option value="1-3day">CORPORATION</option>
@@ -73,18 +73,18 @@
 
 
                         <div class="formgroup">
-                            <label for="statement">upload your bank statement(last 6 month)</label>
+                            <label class="statementPlaceeholder" for="statement">upload your bank statement(last 6 month)</label>
                             <input type="file" name="file" id="statement">
 
                         </div>
-                        <div class="but">
-                            <button type="submit">submit </button>
+                        <div class="submitResetBtn">
+                            <button type="submit" class="btn btn-outline-primary">submit</button>
+                            <button type="reset" class="btn btn-outline-primary">reset</button>
+                            
+                            </div>
 
-                            <button type="reset"> reset</button>
-                        </div>
 
-
-                    </div class="formgroup">
+                    <div class="formgroup">
                     <label for="family">by checking here you agree that you have read and agree to liberty bank's <a
                             href="https://www.libertybank.ge/ka/standartuli-pirobebi/liberti-angarishi">Terms &
                             Conditions</a> </label>

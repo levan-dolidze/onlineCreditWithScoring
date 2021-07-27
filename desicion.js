@@ -6,88 +6,88 @@ let isnotMerried = localStorage.getItem('isnotMerried');
 let male = localStorage.getItem('male');
 let businessStart = Date.parse(localStorage.getItem('businessStart'));
 let userAgeInput = Date.parse(localStorage.getItem('birthday'));
-let businessName =localStorage.getItem('nameid');
-let firstName =localStorage.getItem('firstName');
+let businessName = localStorage.getItem('nameid');
+let firstName = localStorage.getItem('firstName');
 
 const toDay = new Date();
-const userAgeToObject  = new Date(userAgeInput);
-const businessStartToObject =new Date(businessStart);
+const userAgeToObject = new Date(userAgeInput);
+const businessStartToObject = new Date(businessStart);
 
-const getUserAge =(today,userBirthhDay)=>{
-return today-userBirthhDay;
+const getUserAge = (today, userBirthhDay) => {
+    return today - userBirthhDay;
 }
-const userAge = getUserAge(toDay.getFullYear(),userAgeToObject.getFullYear())
-const businessStartDate = getUserAge(toDay.getFullYear(),businessStartToObject.getFullYear())
+const userAge = getUserAge(toDay.getFullYear(), userAgeToObject.getFullYear())
+const businessStartDate = getUserAge(toDay.getFullYear(), businessStartToObject.getFullYear())
 
 
 
 let point = 0;
 let rejectPoints = 0;
 
-const getLoanRate0_500 =(loanAmount,scorePoint)=>{
-if(loanAmount<=500 && scorePoint>=11 &&scorePoint<=13){
-    return 36
-}
-else if(loanAmount<=500 && scorePoint>13 &&scorePoint<=15){
-return 24
-}
-else if((loanAmount<=500 && scorePoint>15)){
-return 20
-}
-
-else{
-    return 36
-}
-
-
-}
-
-const getLoanRate500_1000 =(loanAmount,scorePoint)=>{
-    if(loanAmount>500 && loanAmount<=1000 && scorePoint>10 &&scorePoint<=12){
+const getLoanRate0_500 = (loanAmount, scorePoint) => {
+    if (loanAmount <= 500 && scorePoint >= 11 && scorePoint <= 13) {
         return 36
     }
-    else if(loanAmount>500 && loanAmount<=1000 &&  scorePoint>12 &&scorePoint<=14){
-    return 24
+    else if (loanAmount <= 500 && scorePoint > 13 && scorePoint <= 15) {
+        return 24
     }
-    else if(loanAmount>500 && loanAmount<=1000 &&  scorePoint>14){
-    return 20
+    else if ((loanAmount <= 500 && scorePoint > 15)) {
+        return 20
     }
-    
-    else{
+
+    else {
         return 36
     }
-    
-    
-    }
-    
-const getLoanRate1000_3000 =(loanAmount,scorePoint)=>{
-    if(loanAmount>1000 && loanAmount<=3000 && scorePoint>9 &&scorePoint<=11){
+
+
+}
+
+const getLoanRate500_1000 = (loanAmount, scorePoint) => {
+    if (loanAmount > 500 && loanAmount <= 1000 && scorePoint > 10 && scorePoint <= 12) {
         return 36
     }
-    else if(loanAmount>1000 && loanAmount<=3000 &&  scorePoint>11 &&scorePoint<=13){
-    return 24
+    else if (loanAmount > 500 && loanAmount <= 1000 && scorePoint > 12 && scorePoint <= 14) {
+        return 24
     }
-    else if(loanAmount>1000 && loanAmount<=3000 &&  scorePoint>13){
-    return 20
+    else if (loanAmount > 500 && loanAmount <= 1000 && scorePoint > 14) {
+        return 20
     }
-    
-    else{
+
+    else {
+        return 36
+    }
+
+
+}
+
+const getLoanRate1000_3000 = (loanAmount, scorePoint) => {
+    if (loanAmount > 1000 && loanAmount <= 3000 && scorePoint > 9 && scorePoint <= 11) {
+        return 36
+    }
+    else if (loanAmount > 1000 && loanAmount <= 3000 && scorePoint > 11 && scorePoint <= 13) {
+        return 24
+    }
+    else if (loanAmount > 1000 && loanAmount <= 3000 && scorePoint > 13) {
+        return 20
+    }
+
+    else {
         return 36
     }
 }
 
-const getLoanRate3000_5000 =(loanAmount,scorePoint)=>{
-    if(loanAmount>3000 && loanAmount<=5000 && scorePoint>8 &&scorePoint<=10){
+const getLoanRate3000_5000 = (loanAmount, scorePoint) => {
+    if (loanAmount > 3000 && loanAmount <= 5000 && scorePoint > 8 && scorePoint <= 10) {
         return 36
     }
-    else if(loanAmount>3000 && loanAmount<=5000 &&  scorePoint>10 &&scorePoint<=12){
-    return 24
+    else if (loanAmount > 3000 && loanAmount <= 5000 && scorePoint > 10 && scorePoint <= 12) {
+        return 24
     }
-    else if(loanAmount>3000 && loanAmount<=5000 &&  scorePoint>12){
-    return 20
+    else if (loanAmount > 3000 && loanAmount <= 5000 && scorePoint > 12) {
+        return 20
     }
-    
-    else{
+
+    else {
         return 36
     }
 }
@@ -114,17 +114,17 @@ const getAmount = () => {
 getAmount()
 
 const getReviewDuration = () => {
-    if(reviewDuration==="24hour"){
+    if (reviewDuration === "24hour") {
         point++;
     }
-    else if(reviewDuration==="1-3day"){
-        point+=2;
+    else if (reviewDuration === "1-3day") {
+        point += 2;
     }
-    else if (reviewDuration==="7day"){
-        point+=3
+    else if (reviewDuration === "7day") {
+        point += 3
     }
-    else if(reviewDuration==="moreThanWeek"){
-        point+=4
+    else if (reviewDuration === "moreThanWeek") {
+        point += 4
     }
 
 }
@@ -132,56 +132,56 @@ const getReviewDuration = () => {
 getReviewDuration();
 
 const getStatus = () => {
-    if(isnotMerried==="1"){
+    if (isnotMerried === "1") {
         point++
     }
-    else{
-      point+=2
+    else {
+        point += 2
     }
-  }
-  
-  getStatus()
-  
+}
+
+getStatus()
+
 
 const getGender = () => {
-    if(male==="on"){
+    if (male === "on") {
         point++
     }
-     else{
-      point+=2
+    else {
+        point += 2
     }
-  
+
 }
 getGender()
 
- const getUserAgeLogic =()=>{
-     if(userAge<18 || userAge>65){
-         rejectPoints++;
-     }
-     else if(userAge>=18 && userAge<=50){
-         point+=4;
-     }
-     else if(userAge>50 && userAge<=65){
-         point+=2;
-     }
- }
- getUserAgeLogic()
+const getUserAgeLogic = () => {
+    if (userAge < 18 || userAge > 65) {
+        rejectPoints++;
+    }
+    else if (userAge >= 18 && userAge <= 50) {
+        point += 4;
+    }
+    else if (userAge > 50 && userAge <= 65) {
+        point += 2;
+    }
+}
+getUserAgeLogic()
 
 
- 
+
 const getBusinessStartDate = () => {
-if(businessStartDate<1){
-    point++
-}
-else if(businessStartDate>1 && businessStartDate<=2){
-point+=2
-}
-else if(businessStartDate>2&&businessStartDate<=3){
-point+=3
-}
-else if(businessStartDate>3){
-    point+=4
-}
+    if (businessStartDate < 1) {
+        point++
+    }
+    else if (businessStartDate > 1 && businessStartDate <= 2) {
+        point += 2
+    }
+    else if (businessStartDate > 2 && businessStartDate <= 3) {
+        point += 3
+    }
+    else if (businessStartDate > 3) {
+        point += 4
+    }
 }
 getBusinessStartDate()
 
@@ -205,46 +205,55 @@ const getAnnualRevenue = () => {
 
 getAnnualRevenue()
 
+const maxAmountCheck = () => {
+    if (amount > 5000) {
+        rejectPoints++
+    }
+
+
+}
+maxAmountCheck()
+
 console.log(point)
 console.log(rejectPoints)
-const loanRate =  getLoanRate0_500(amount,point);
-const loan5001000 = getLoanRate500_1000(amount,point);
-const loan10003000 = getLoanRate1000_3000(amount,point);
-const loan30005000 = getLoanRate3000_5000(amount,point);
+const loanRate = getLoanRate0_500(amount, point);
+const loan5001000 = getLoanRate500_1000(amount, point);
+const loan10003000 = getLoanRate1000_3000(amount, point);
+const loan30005000 = getLoanRate3000_5000(amount, point);
 
 
-const getDesicion =()=>{
-    if(rejectPoints>0){
-        const disicion= document.querySelector('.disicion');{
+const getDesicion = () => {
+    if (rejectPoints > 0) {
+        const disicion = document.querySelector('.disicion'); {
             const rejectLogo = document.createElement('IMG');
-            rejectLogo.src='rejectedLogo.jpg';
-         disicion.append(rejectLogo);
-         const rejectedText = document.createElement('p');
-         rejectedText.textContent=`Hello ${firstName}, your company: "${businessName}"  Has not been aproved for credit  `;
-         const desicionText =document.querySelector('.desicionText');
-         desicionText.append(rejectedText);
-         setTimeout(function(){   
-              window.location.replace("index.html");
-            localStorage.clear();
-            }, 3000);
+            rejectLogo.src = 'rejectedLogo.jpg';
+            disicion.append(rejectLogo);
+            const rejectedText = document.createElement('p');
+            rejectedText.textContent = `Hello ${firstName}, your company: "${businessName}"  Has not been aproved for credit  `;
+            const desicionText = document.querySelector('.desicionText');
+            desicionText.append(rejectedText);
+             setTimeout(function(){   
+                  window.location.replace("index.html");
+                localStorage.clear();
+                }, 4000);
         }
-      
+
     }
-    else{
-        const disicion =  document.querySelector('.disicion');
+    else {
+        const disicion = document.querySelector('.disicion');
         const approvedLogo = document.createElement('IMG');
-        approvedLogo.src="aprovedLogo.png";
+        approvedLogo.src = "aprovedLogo.png";
         disicion.append(approvedLogo);
         const approvedText = document.createElement('p');
-        approvedText.textContent=`Hello ${firstName}, your company: "${businessName}" are approved for credit please call us to review your offer and loan detils `;
-        const desicionText =document.querySelector('.desicionText');
+        approvedText.textContent = `Hello ${firstName}, your company: "${businessName}" are approved for credit please call us to review your offer and loan detils `;
+        const desicionText = document.querySelector('.desicionText');
         desicionText.append(approvedText);
         setTimeout(function(){   
             window.location.replace("index.html");
           localStorage.clear();
-          }, 3000);
-      }
-    
+          }, 4000);
+    }
+
 }
 getDesicion()
 

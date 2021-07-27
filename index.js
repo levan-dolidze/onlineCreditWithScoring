@@ -1,4 +1,4 @@
-const firstBtn=document.querySelector('.btn');
+const firstBtn=document.querySelector('.btn-primary');
 const formfild=document.querySelector('.formfild');
 const selectid = document.getElementById('selectid');
 const birthdateid = document.getElementById('birthdateid');
@@ -10,6 +10,9 @@ const isMerried =document.getElementById('petsid');
 const firstname=document.getElementById("nameid");
 const businessStart = document.getElementById('businessStart');
 const annualRevenue =document.getElementById('annualRevenue');
+
+
+
 firstBtn.addEventListener('click',()=>{
   localStorage.setItem('amount',formfild.value);
   localStorage.setItem('reviewDuration',selectid.value);
