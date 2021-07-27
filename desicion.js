@@ -217,7 +217,7 @@ const getDesicion =()=>{
     if(rejectPoints>0){
         const disicion= document.querySelector('.disicion');{
             const rejectLogo = document.createElement('IMG');
-            rejectLogo.src='https://careerswithpaul.files.wordpress.com/2015/09/7f257-0xsreybqjong-u0ha.gif';
+            rejectLogo.src='rejectedLogo.jpg';
          disicion.append(rejectLogo)
          const rejectedText = document.createElement('p');
          rejectedText.textContent=`Hello ${firstName}, your company: "${businessName}"  Has not been aproved for credit  `;
@@ -230,7 +230,7 @@ const getDesicion =()=>{
     else{
         const disicion =  document.querySelector('.disicion');
         const approvedLogo = document.createElement('IMG');
-        approvedLogo.src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/approved-design-template-2e655277ad3e77be0d7f1fec169f0004_screen.jpg?ts=1610024523";
+        approvedLogo.src="aprovedLogo.png";
         disicion.append(approvedLogo)
         const approvedText = document.createElement('p');
         approvedText.textContent=`Hello ${firstName}, your company: "${businessName}" are approved for credit please call us to review your offer and loan detils `;
