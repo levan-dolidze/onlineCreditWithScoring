@@ -223,7 +223,10 @@ const getDesicion =()=>{
          rejectedText.textContent=`Hello ${firstName}, your company: "${businessName}"  Has not been aproved for credit  `;
          const desicionText =document.querySelector('.desicionText');
          desicionText.append(rejectedText)
-            
+         setTimeout(function(){   
+              window.location.replace("index.html");
+            localStorage.clear()
+            }, 3000);
         }
       
     }
@@ -236,7 +239,12 @@ const getDesicion =()=>{
         approvedText.textContent=`Hello ${firstName}, your company: "${businessName}" are approved for credit please call us to review your offer and loan detils `;
         const desicionText =document.querySelector('.desicionText');
         desicionText.append(approvedText)
-    }
+        setTimeout(function(){   
+            window.location.replace("index.html");
+          localStorage.clear()
+          }, 3000);
+      }
+    
 }
 getDesicion()
 
