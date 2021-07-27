@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bussines online loan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <header>
+    <h1><img src="https://www.libertybank.ge/m/i/logo-en@2x.png" alt=""></h1>
+</header>
+<p>apply a simple application and get an answer in 5 minutes</p>
+<h6 class="title">basics</h6>
+
+<form enctype="multipart/form-data" id ="signup">
+   
+    <div >
+        <label for="amount"> how much funding do you think you may need?</label>
+        <input  class ="formfild" type="number" name="age" id="amount"  min="50" max="25000" step="1" required>
+        <div>
+   <div class="formgroup">
+    <label for="selectid">how soon do you need the money?</label>
+    
+    <select name="select" id="selectid" >
+    <option value="24hour">within 24 hours</option>
+    <option value="1-3day">within 1 day-3 days</option>
+    <option value="7day">within 7 days</option>
+    <option value="moreThanWeek">more than a week</option>
+</select>
+</div>
+<div class ="formgroup">
+    <label for="description">how will you use the loan?</label>
+    
+    <textarea name="description" id="description" cols="50" rows="7" placeholder="use this place to describe the purpose of your loan to the best of your ability."></textarea>
+</div>
+
+
+    <div class="formgroup">
+    <label for="nameid">first name </label>
+    <input class ="formfild" type="text " name="name" id="nameid"   maxlength="100" required>
+    
+</div>
+<div class="formgroup">
+    <label for="lastname">last name </label>
+    <input class ="formfild" type="text " name="name" id="lastname"   maxlength="100" required>
+    
+</div>
+<div >
+    <label for="id"> ID number </label>
+    <input  class ="formfild" type="name" name="id" id="id" maxlength="11" required >
+    <div>
+   
+<div class="formgroup"> 
+    <label for="birthdateid">birth date</label>
+    <input type="date" name ="birthdate" id="birthdateid" >
+</div>
+
+<div class=gender>
+<span class="formgroup">
+    
+    <label for="maleId">male</label>
+    <input type="radio" name="radio" id="maleId" checked  >
+    
+</span>
+ <span class ="formgroup"> 
+    <label for="femaleId">female</label>
+    <input type="radio" name="radio" id="femaleId">
+</span>
+
+</div>
+
+   <div class="formgroup">
+    <label for="emaiid">Your Email Address</label>
+    <input class ="formfild"  type="email" name="email" id="emailid"  required>
+</div>
+
+
+<div  class="formgroup">
+    <label for="receiveemailid">do you want to receive email?</label>
+    <input class ="formfild" type="checkbox"  name="receiveemailid" id="receiveemailid">
+</div>
+
+<div class="formgroup">
+    <label for="mobileid">mob</label>
+     <input class ="formfild" type="tel" name="mobile" id="mobileid">
+ </div>
+
+
+   
+<div class="formgroup">
+    <label for="selectid">How did you hear about us?</label>
+    <select class ="formfild" name="select" id="selectid">
+    <option value="tv">tv ad</option>
+    <option value="int">internet</option>
+    <option value="papers">news papers</option>
+    <option value="other">other</option>
+</select>
+</div>
+
+
+
+   
+    <div class= "formgroup">
+    <label for="family">are you married?</label>
+    <input class ="formfild" type="checkbox" name="family" id="petsid">
+</div>
+
+
+
+<div class="formgroup">
+    <label for="fileid">uploadfile</label>
+    <input type="file" name="file" id="fileid" >
+    
+</div >
+<div class="but">
+<button type="submit">submit </button>
+<button type="reset"> reset</button>
+</div>
+
+
+
+
+<nav>
+    <button type="button" class="btn btn-primary"> <a href="businessInfo.html" > continue</a></button>
+
+        
+
+    </nav>
+
+
+</form>
+
+
+
+
+<script src="index.js"></script>
+
+
+</body>
+</html>
