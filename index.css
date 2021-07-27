@@ -91,4 +91,7 @@ p{
     background-color: honeydew;
 
 }
-
+.btn-primary,.btn-success{
+margin-top: 20px;
+margin-bottom: 20px;
+}
