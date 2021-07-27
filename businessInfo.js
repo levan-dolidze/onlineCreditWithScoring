@@ -5,14 +5,11 @@ const annualRevenue =document.getElementById('annualRevenue');
 
 
     secondBtn.addEventListener('click',()=>{
-
-        // localStorage.setItem("textvalue",firstname.value);
     
     localStorage.setItem('businessStart',businessStart.value);
     localStorage.setItem('annualRevenue',annualRevenue.value);
     localStorage.setItem('nameid',nameid.value);
 
-        // return false;
 
 
     })

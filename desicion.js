@@ -218,14 +218,14 @@ const getDesicion =()=>{
         const disicion= document.querySelector('.disicion');{
             const rejectLogo = document.createElement('IMG');
             rejectLogo.src='rejectedLogo.jpg';
-         disicion.append(rejectLogo)
+         disicion.append(rejectLogo);
          const rejectedText = document.createElement('p');
          rejectedText.textContent=`Hello ${firstName}, your company: "${businessName}"  Has not been aproved for credit  `;
          const desicionText =document.querySelector('.desicionText');
-         desicionText.append(rejectedText)
+         desicionText.append(rejectedText);
          setTimeout(function(){   
               window.location.replace("index.html");
-            localStorage.clear()
+            localStorage.clear();
             }, 3000);
         }
       
@@ -234,19 +234,21 @@ const getDesicion =()=>{
         const disicion =  document.querySelector('.disicion');
         const approvedLogo = document.createElement('IMG');
         approvedLogo.src="aprovedLogo.png";
-        disicion.append(approvedLogo)
+        disicion.append(approvedLogo);
         const approvedText = document.createElement('p');
         approvedText.textContent=`Hello ${firstName}, your company: "${businessName}" are approved for credit please call us to review your offer and loan detils `;
         const desicionText =document.querySelector('.desicionText');
-        desicionText.append(approvedText)
+        desicionText.append(approvedText);
         setTimeout(function(){   
             window.location.replace("index.html");
-          localStorage.clear()
+          localStorage.clear();
           }, 3000);
       }
     
 }
 getDesicion()
+
+// scoring test
 
 // console.log("0-500 "+ loanRate)
 // console.log("500-1000 "+ loan5001000)
