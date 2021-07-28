@@ -224,16 +224,16 @@ const loan30005000 = getLoanRate3000_5000(amount, point);
 
 const getApprovedRate =(range1,range2,range3,range4)=>{
 if(amount<=500){
-    return range1
+    return range1;
 }
 else if(amount>500 && amount<=1000){
-return range2
+return range2;
 }
 else if(amount>1000 && amount<=3000){
-return range3
+return range3;
 }
 else if(amount>3000 && amount<=5000){
-return range4
+return range4;
 }
 
 
@@ -247,16 +247,16 @@ const getDesicion = () => {
     if (rejectPoints > 0) {
         const disicion = document.querySelector('.disicion'); {
             const rejectLogo = document.createElement('IMG');
-            rejectLogo.src = 'rejectedLogo.jpg';
+            rejectLogo.src = 'rejectedLogo.png';
             disicion.append(rejectLogo);
             const rejectedText = document.createElement('p');
             rejectedText.textContent = `Hello ${firstName}, your company: "${businessName}"  Has not been aproved for credit`;
             const desicionText = document.querySelector('.desicionText');
             desicionText.append(rejectedText);
-            //  setTimeout(function(){   
-            //       window.location.replace("index.html");
-            //     localStorage.clear();
-            //     }, 4000);
+             setTimeout(function(){   
+                  window.location.replace("index.html");
+                localStorage.clear();
+                }, 4000);
         }
 
     }
@@ -269,10 +269,10 @@ const getDesicion = () => {
         approvedText.textContent = `Hello ${firstName}, your company: "${businessName}" are approved for credit: $ ${amount} , rate: ${aprovedRate} % ,  please call us to review your offer and loan detils `;
         const desicionText = document.querySelector('.desicionText');
         desicionText.append(approvedText);
-        // setTimeout(function(){   
-        //     window.location.replace("index.html");
-        //   localStorage.clear();
-        //   }, 4000);
+        setTimeout(function(){   
+            window.location.replace("index.html");
+          localStorage.clear();
+          }, 4000);
     }
 
 }
