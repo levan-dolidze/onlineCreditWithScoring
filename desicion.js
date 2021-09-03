@@ -43,7 +43,7 @@ const getLoanRate0_500 = (loanAmount, scorePoint) => {
 }
 
 const getLoanRate500_1000 = (loanAmount, scorePoint) => {
-    if ( loanAmount > 500 && loanAmount <= 1000 && scorePoint > 10 && scorePoint <= 12) {
+    if (loanAmount > 500 && loanAmount <= 1000 && scorePoint > 10 && scorePoint <= 12) {
         return 36
     }
     else if (loanAmount > 500 && loanAmount <= 1000 && scorePoint > 12 && scorePoint <= 14) {
@@ -222,24 +222,24 @@ const loan10003000 = getLoanRate1000_3000(amount, point);
 const loan30005000 = getLoanRate3000_5000(amount, point);
 
 
-const getApprovedRate =(range1,range2,range3,range4)=>{
-if(amount<=500){
-    return range1;
-}
-else if(amount>500 && amount<=1000){
-return range2;
-}
-else if(amount>1000 && amount<=3000){
-return range3;
-}
-else if(amount>3000 && amount<=5000){
-return range4;
-}
+const getApprovedRate = (range1, range2, range3, range4) => {
+    if (amount <= 500) {
+        return range1;
+    }
+    else if (amount > 500 && amount <= 1000) {
+        return range2;
+    }
+    else if (amount > 1000 && amount <= 3000) {
+        return range3;
+    }
+    else if (amount > 3000 && amount <= 5000) {
+        return range4;
+    }
 
 
 }
 
-const aprovedRate= getApprovedRate(loanRate,loan5001000,loan10003000,loan30005000)
+const aprovedRate = getApprovedRate(loanRate, loan5001000, loan10003000, loan30005000)
 
 
 
@@ -253,10 +253,10 @@ const getDesicion = () => {
             rejectedText.textContent = `Hello ${firstName}, your company: "${businessName}"  Has not been aproved for credit`;
             const desicionText = document.querySelector('.desicionText');
             desicionText.append(rejectedText);
-             setTimeout(function(){   
-                  window.location.replace("index.html");
+            setTimeout(function () {
+                window.location.replace("index.html");
                 localStorage.clear();
-                }, 4000);
+            }, 4000);
         }
 
     }
@@ -269,10 +269,10 @@ const getDesicion = () => {
         approvedText.textContent = `Hello ${firstName}, your company: "${businessName}" are approved for credit: $ ${amount} , rate: ${aprovedRate} % ,  please call us to review your offer and loan detils `;
         const desicionText = document.querySelector('.desicionText');
         desicionText.append(approvedText);
-        setTimeout(function(){   
+        setTimeout(function () {
             window.location.replace("index.html");
-          localStorage.clear();
-          }, 4000);
+            localStorage.clear();
+        }, 4000);
     }
 
 }
