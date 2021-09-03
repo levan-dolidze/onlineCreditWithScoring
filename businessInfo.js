@@ -19,7 +19,8 @@ secondBtn.addEventListener('click', () => {
         localStorage.setItem('businessStart', businessStart.value);
         localStorage.setItem('annualRevenue', annualRevenue.value);
         localStorage.setItem('nameid', nameid.value);
-        window.location.href = "desicion.html";
+        // window.location.href = "desicion.html";
+        window.location.replace("desicion.html");
 
     }
 })
