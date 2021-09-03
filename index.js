@@ -29,7 +29,7 @@ firstBtn.addEventListener('click',()=>{
   localStorage.setItem('reviewDuration',selectid.value);
   localStorage.setItem('birthday',birthdateid.value);
   localStorage.setItem('firstName',firstname.value);
-    //  window.location.replace("businessinfo.html");
+     window.location.replace("businessinfo.html");
   // window.location.href = "businessinfo.html";
 
   }
