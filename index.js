@@ -29,10 +29,10 @@ firstBtn.addEventListener('click',()=>{
   localStorage.setItem('reviewDuration',selectid.value);
   localStorage.setItem('birthday',birthdateid.value);
   localStorage.setItem('firstName',firstname.value);
-    
+  window.location.replace("businessinfo.html");
   // window.location.href = "businessinfo.html";
 
- 
+}
   
   if(maleId.checked){
     localStorage.setItem('male',maleId.value);
@@ -45,8 +45,8 @@ firstBtn.addEventListener('click',()=>{
   } else{
     localStorage.setItem('isnotMerried',1);
   }
-  window.location.replace("businessinfo.html");
-}
+
+
 
 })
 
