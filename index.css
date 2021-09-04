@@ -1,14 +1,13 @@
 body
 {
     text-transform: capitalize;
-    background-color: #F2F3F5;
     font-family: 'Roboto', sans-serif;
 
 }
 body,html{
     padding: 0px;
     margin: 0px;
-    background-color: #ECF3FF;;
+    background-color: #F2F3F5;;
 }
 
 header{
