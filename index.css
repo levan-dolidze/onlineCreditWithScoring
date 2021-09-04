@@ -30,24 +30,6 @@ header{
     margin: 0 auto;
     width: 40%;
 }
-@media only screen and (max-width: 1030px) {
-    #signup {
-      
-        width: 60%;
-    }
-    .title{
-        font-size: medium;
-    }
-    .basicsTitle{
-        font-size: small;
-    }
-  }
-
-footer{
-    background-color: white;
-    height: 100px;
-}
-
 .formfild
 {
     padding: 8px;
@@ -55,6 +37,11 @@ footer{
     border-radius: 4px;
     border:1px solid #F5F6F7;
 }
+.formgroup
+{
+    margin-top: 2%;
+}
+
 .btn a,.btn-success a{
     color: white;
     text-decoration: none;
@@ -65,10 +52,9 @@ footer{
   border-radius: 4px;
   border:1px solid #F5F6F7;
 }
-.formgroup
-{
-    margin-top: 2%;
-}
+
+
+
 .submitResetBtn
 {
     text-align: center;
@@ -104,12 +90,7 @@ p{
     src: url('https://image.freepik.com/free-vector/green-approved-stamp-with-grunge_115464-413.jpg') 
 }
 
-.page3
-{
-    color: green;
-    background-color: honeydew;
 
-}
 .btn-primary,.btn-success{
 margin-top: 20px;
 margin-bottom: 20px;
@@ -121,3 +102,15 @@ margin-bottom: 20px;
     width: 100%;
     
 }
+@media only screen and (max-width: 1030px) {
+    #signup {
+      
+        width: 60%;
+    }
+    .title{
+        font-size: medium;
+    }
+    .basicsTitle{
+        font-size: small;
+    }
+  }
