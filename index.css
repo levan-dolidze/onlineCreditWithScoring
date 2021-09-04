@@ -12,8 +12,14 @@ body,html{
 }
 
 header{
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 20px;
+  
+  
+}
+.title{
+  text-align: center;
 }
 .basicsTitle{
    text-align: center;
@@ -29,6 +35,12 @@ header{
     #signup {
       
         width: 60%;
+    }
+    .title{
+        font-size: medium;
+    }
+    .basicsTitle{
+        font-size: small;
     }
   }
 
