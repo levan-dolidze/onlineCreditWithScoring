@@ -25,7 +25,7 @@ mobileid.addEventListener('change', changeButtonStatus);
 
 
 function changeButtonStatus() {
-  if (checkInpunts()==false) {
+  if (checkInpunts() == false) {
     document.querySelector(".btn-primary").disabled = false
   }
   else {
@@ -33,18 +33,18 @@ function changeButtonStatus() {
   }
 };
 
-function checkInpunts (){
+function checkInpunts() {
   if (formfild.value === "" || firstname.value === "" || birthdateid.value === "" || description.value === "" || lastname.value === ""
     || id.value === "" || emailid.value === "" || mobileid.value === "") {
     return true
   } else {
     return false
-}
+  }
 }
 
 firstBtn.addEventListener('click', () => {
-  if(checkInpunts()==true){
-  return
+  if (checkInpunts() == true) {
+    return
   }
   else {
 

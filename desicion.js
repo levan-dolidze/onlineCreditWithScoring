@@ -256,7 +256,7 @@ const getDesicion = () => {
             setTimeout(function () {
                 window.location.replace("index.html");
                 localStorage.clear();
-            }, 4000);
+            }, 5000);
         }
 
     }
@@ -272,7 +272,7 @@ const getDesicion = () => {
         setTimeout(function () {
             window.location.replace("index.html");
             localStorage.clear();
-        }, 4000);
+        }, 5000);
     }
 
 }
